@@ -1,0 +1,114 @@
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.fl {
+  float: left;
+  position: relative;
+}
+.fr {
+  float: right;
+  position: relative;
+}
+.arrow-down {
+  display: inline-block;
+  border: 5px solid transparent;
+  border-top: 5px solid #999;
+}
+.search {
+  &-name {
+    width: 25%;
+    line-height: 27px;
+    .choose-name {
+      display: inline-block;
+      width: 70%;
+      text-align: center;
+    }
+  }
+  &-input {
+    width: 75%;
+    input {
+      width: 100%;
+      font-size: 14px;
+      background: none;
+      padding: 5px 20px 5px 5px;
+      border: none;
+      border-bottom: 1px solid #d9d9d9;
+      outline: none;
+    }
+    .weui-icon-search {
+      position: absolute;
+      right: 0;
+      top: 7px;
+    }
+  }
+}
+.home {
+  .weui-grid__icon {
+    width: 45px;
+    height: 45px;
+  }
+  .weui-grids {
+    padding: 25px 15px;
+    &:after, &:before {
+      content: normal;
+    }
+  }
+  .weui-grid {
+    padding: 10px;
+    &:after, &:before {
+      content: normal;
+    }
+  }
+  .recommend {
+    border-left: 3px solid #999;
+    padding-left: 8px;
+  }
+}
+
+// 认证步骤
+.text-default {
+  padding: 3px 10px;
+  border: 1px solid #666;
+  border-radius: 5px;
+  text-align: center;
+}
+.text-red {
+  padding: 3px 10px;
+  border: 1px solid #e75c61;
+  border-radius: 5px;
+  text-align: center;
+}
+.text-bd-red {
+  color: #e75c61;
+  background-color: #fff;
+}
+.text-bd-default {
+  color: #666;
+  background-color: #fff;
+}
+.text-bg-red {
+  color: #fff;
+  background-color: #e75c61;
+}
+.auth {
+  .tips {
+    height: 30px;
+    line-height: 30px;
+    color: #ff6600;
+    background-color: #F8F8F8;
+    font-size: 12px;
+    text-align: center;
+  }
+  &-bottom {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    .text-red {
+      margin-left: 10px;
+    }
+  }
+}
