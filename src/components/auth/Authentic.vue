@@ -15,9 +15,9 @@
         </div>
 
         <div class="auth-bottom">
-            <button class="text-red text-bg-red" @click="toFirst">第一</button>
-            <button class="text-red text-bd-red" @click="toSecond">第二</button>
-            <button class="text-red text-bd-red" @click="toThird">第三</button>
+            <button class="text-red" :class="{'active': btnText === '第一'}" @click="toLink('第一')">第一</button>
+            <button class="text-red" :class="{'active': btnText === '第二'}" @click="toLink('第二')">第二</button>
+            <button class="text-red" :class="{'active': btnText === '第三'}" @click="toLink('第三')">第三</button>
         </div>
     </div>
 </template>
@@ -27,21 +27,23 @@
     name: 'authentic',
     data () {
       return {
-        height: ''
+        height: '',
+        btnText: '第一'
       }
     },
     mounted () {
       this.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
     },
     methods: {
-      toFirst () {
-        this.$router.push('/authentic-one')
-      },
-      toSecond () {
-        this.$router.push('/authentic-two')
-      },
-      toThird () {
-        this.$router.push('/authentic-three')
+      toLink (type) {
+        this.btnText = type
+        if (type === '第一') {
+          this.$router.push('/authentic-one')
+        } else if (type === '第二') {
+          this.$router.push('/authentic-two')
+        } else {
+          this.$router.push('/authentic-three')
+        }
       }
     }
   }
